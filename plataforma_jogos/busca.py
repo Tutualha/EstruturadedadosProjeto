@@ -1,3 +1,4 @@
+# função para buscar jogadores e partidas
 def buscar_jogadores(nome, lista_jogadores):
     print(f"\n🔍 Buscando jogador com nome contendo: '{nome}'")
     encontrados = []
@@ -26,3 +27,5 @@ def buscar_partidas (modo, lista_partidas):
                 print(f"✅ Partida encontrada: {p.id} (Modo: {p.modo}) (Jogadores: {[j.nome for j in p.jogadores]}) Mapa: {p.mapa} - Ping: {p.ping}ms")
         else:
                 print("❌ Nenhuma partida encontrada nesse modo.")
+                
+# vai ser importada no arquivo principal
