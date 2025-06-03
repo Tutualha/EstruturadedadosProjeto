@@ -13,16 +13,16 @@ def buscar_jogadores(nome, lista_jogadores):
         print("❌ Nenhum jogador encontrado com esse nome.")
         
         
-    def buscar_partidas (modo, lista_partidas):
-        print(f"\n🔍 Buscando partidas no modo: '{modo}'")
-        filtradas = []
+def buscar_partidas (modo, lista_partidas):
+    print(f"\n🔍 Buscando partidas no modo: '{modo}'")
+    filtradas = []
         
-        for partida in lista_partidas:
-            if partida.modo.lower() == modo.lower():
-                filtradas.append(partida)
+    for partida in lista_partidas:
+        if partida.modo.lower() == modo.lower():
+            filtradas.append(partida)
 
         if filtradas:
             for p in filtradas:
                 print(f"✅ Partida encontrada: {p.id} (Modo: {p.modo}) (Jogadores: {[j.nome for j in p.jogadores]}) Mapa: {p.mapa} - Ping: {p.ping}ms")
         else:
-            print("❌ Nenhuma partida encontrada nesse modo.")
+                print("❌ Nenhuma partida encontrada nesse modo.")
