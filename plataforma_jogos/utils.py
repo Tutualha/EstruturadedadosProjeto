@@ -5,11 +5,12 @@ def limpar_tela():
 
 def menu0_jogo():
     print('n/---Menu Principal---')
-    print('1. Cadastrar jogador')
-    print('2. Iniciar partida')
-    print('3. Buscar jogador')
-    print('4. Ver Ranking')
-    print('5. Sair')
+    print('1. Seu Perfil')
+    print('2. Alterar Nickname')
+    print('3. Classificação ')
+    print('4. Modo de jogo')
+    print('5. Iniciar partida')
+    print('0. Salvar e sair.')
     return input('Ecolha uma opção: ')
 
 def pausar(): 
