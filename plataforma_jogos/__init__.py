@@ -1,0 +1,1 @@
+# Python entender que a pasta plataforma_jogos é um pacote
