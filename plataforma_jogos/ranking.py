@@ -20,3 +20,9 @@ class Ranking:
         print(f"Top {n} jogadores:")
         for i, j in enumerate(top, start=1):
             print(f"{i}. {j.nome} - {j.pontos} pts - {j.vitorias} vitórias")
+
+    def buscar_jogador(self, nome):
+        for jogador in self.jogadores:
+            if nome.lower() == jogador.nome.lower():
+                return jogador
+        return None

@@ -5,7 +5,7 @@ def limpar_tela():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 # Mostra o menu princiapal do jogo e retorna as escolhas como str
-def menu_jogo():
+def menu0_jogo():
     print('n/---Menu Principal---')
     print('1. Criar jogador')
     print('2. Atualizar pontuação')

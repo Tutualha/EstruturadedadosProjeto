@@ -1,7 +1,7 @@
 from collections import deque
 from jogador import Jogador
 
-def Matchmaking(jogadores):
+def matchmaking(jogadores):
   jogadores_fila = deque(jogadores)    #copia a lista como deque - fila
   partida = []
 
