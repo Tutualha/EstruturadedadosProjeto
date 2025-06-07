@@ -32,7 +32,7 @@ EstruturadedadosProjeto/
 1. Clone o repositório:
    ```bash
    git clone https://github.com/Tutualha/EstruturadedadosProjeto.git
-````
+   ```
 
 2. Entre na pasta:
 
@@ -79,6 +79,6 @@ Este projeto está licenciado sob a Licença **MIT**. Confira o arquivo `LICENSE
 
 ---
 
-Feito com a ajuda de IA para estruturar o conteúdo de forma clara e colaborativa.
+Feito com a ajuda de IA para estruturar o conteúdo de forma clara e colaborativa, porem boa parte do projeto foi feito á mão 🤠.
 
 
