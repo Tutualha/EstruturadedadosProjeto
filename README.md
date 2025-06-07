@@ -1,4 +1,5 @@
-```markdown
+
+![Capa Projeto Final](https://github.com/user-attachments/assets/03e6cc07-adc0-48c5-90ba-ebf8a5d2e2fa)
 ## Sobre o projeto
 Este projeto foi desenvolvido totalmente em **Python** e aplica conceitos fundamentais de estruturas de dados (listas, pilhas, filas, árvores etc.) em funcionalidades como ranking de jogadores, busca por partidas e gerenciamento de dados em tempo real.
 
