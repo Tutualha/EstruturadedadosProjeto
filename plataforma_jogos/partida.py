@@ -37,5 +37,5 @@ class Partidas:
         
         print("Jogadores na partida:")
         for jogador in self.jogadores:
-            print(f"- {jogador.nome} (ID: {jogador.id_jogador})")
+            print(f"- {jogador.nome} (ID: {jogador.id})")
     

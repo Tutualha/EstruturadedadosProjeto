@@ -1,3 +1,4 @@
+import matchmaking
 from jogador import Jogador
 from ranking import Ranking
 from partida import Partidas
@@ -35,7 +36,8 @@ def main():
             modo = input("Modo de jogo: ")
             mapa = input("Mapa: ")
             ping = int(input("Ping médio: "))
-            partida = Partidas(modo, mapa, ping)
+            id_partida = str(uuid.uuid4())  # Gera ID único para a partida
+            partida = Partidas(modo, mapa, ping, id_partida)
 
             for _ in range(2):  # Simplesmente adiciona dois jogadores
                 nome = input("Nome do jogador: ")
@@ -54,6 +56,17 @@ def main():
             for i, p in enumerate(partidas, start=1):
                 print(f"\nPartida {i}:")
                 p.exibir_info()
+            input("Pressione Enter para continuar...")
+        
+        elif opcao == "6":
+            partidas_geradas = matchmaking(ranking.jogadores)
+            for j1, j2 in partidas_geradas:
+                id_partida = str(uuid.uuid4())
+                nova_partida = Partidas("Matchmaking", "Mapa Padrão", 50, id_partida)
+                nova_partida.adicionar_jogador(j1)
+                nova_partida.adicionar_jogador(j2)
+                partidas.append(nova_partida)
+                print(f"✅ Partida entre {j1.nome} e {j2.nome} criada.")
             input("Pressione Enter para continuar...")
 
         elif opcao == "0":

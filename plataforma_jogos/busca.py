@@ -1,3 +1,5 @@
+
+
 # função para buscar jogadores e partidas
 def buscar_jogadores(nome, lista_jogadores):
     print(f"\n🔍 Buscando jogador com nome contendo: '{nome}'")
