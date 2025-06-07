@@ -9,11 +9,23 @@ Este projeto foi desenvolvido totalmente em **Python** e aplica conceitos fundam
 ```
 
 EstruturadedadosProjeto/
-├── dados/                # Lógica de persistência e manipulação de dados
-├── plataforma\_jogos/     # Código principal: lógica de jogo, matchmaking, ranking
-├── .gitignore            # Arquivos e pastas ignorados pelo Git
-├── LICENSE               # Licença (MIT)
-└── README.md             # Documentação do projeto
+├── dados/
+│   └── jogadores.pkl              # Arquivo com os dados salvos dos jogadores (serializados com pickle)
+│
+├── plataforma_jogos/
+│   ├── __init__.py                # Torna o diretório um pacote Python
+│   ├── main.py                    # Arquivo principal que executa o sistema (menu, lógica principal)
+│   ├── busca.py                   # Funções auxiliares de busca por jogadores e partidas
+│   ├── jogador.py                 # Classe Jogador (nome, id, pontos, vitórias)
+│   ├── matchmaking.py             # Função de matchmaking automático (baseada em critérios de pontuação/vitórias)
+│   ├── partida.py                 # Classe Partida (jogadores, modo, ping, status, vencedor)
+│   ├── ranking.py                 # Classe Ranking (adiciona, busca, atualiza e salva jogadores)
+│   └── utils.py                   # Funções utilitárias (menus, limpar tela, etc.)
+│
+├── .gitignore                     # Arquivos/pastas ignorados pelo Git
+├── LICENSE                        # Licença do projeto
+└── README.md                      # Arquivo de documentação do projeto (este arquivo)
+
 
 ````
 
