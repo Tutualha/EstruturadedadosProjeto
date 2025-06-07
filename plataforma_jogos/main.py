@@ -2,7 +2,7 @@ import matchmaking
 from jogador import Jogador
 from ranking import Ranking
 from partida import Partidas
-from utils import menu0_jogo, limpar_tela
+from utils import menu_jogo, limpar_tela
 import uuid
 
 def main():
@@ -13,7 +13,7 @@ def main():
 
     while True:
         limpar_tela()
-        opcao = menu0_jogo()
+        opcao = menu_jogo()
 
         if opcao == "1":
             nome = input("Nome do jogador: ")
