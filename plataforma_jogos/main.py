@@ -98,6 +98,28 @@ def main():
             exibir_partidas(partidas)
         elif opcao == "6":
             matchmaking_automatico(ranking, partidas)
+        elif opcao == "7":
+            print("🎯 Finalizar uma partida")
+            for i, p in enumerate(partidas, start=1):
+                print(f"{i}. Partida ID: {p.id_partida} - Jogadores: {[j.nome for j in p.jogadores]} - Status: {p.status}")
+
+            index = int(input("Escolha o número da partida para finalizar: ")) - 1
+            if 0 <= index < len(partidas):
+                partida = partidas[index]
+                if partida.status == "andamento":
+                    print("Escolha o vencedor:")
+                    for i, j in enumerate(partida.jogadores, start=1):
+                        print(f"{i}. {j.nome}")
+                    vencedor_index = int(input("Número do vencedor: ")) - 1
+                    vencedor = partida.jogadores[vencedor_index]
+                    partida.finalizar_partida(vencedor)
+                    vencedor.vitorias += 1  # atualiza vitórias
+                else:
+                    print("⚠️ Essa partida já foi finalizada.")
+            else:
+                print("Número inválido.")
+            input("Pressione Enter para continuar...")
+
         elif opcao == "0":
             ranking.salvar_dados()
             print("📁 Dados salvos. Encerrando...")
@@ -105,6 +127,7 @@ def main():
         else:
             print("Opção inválida!")
             input("Pressione Enter para tentar novamente...")
+        
 
 
 if __name__ == "__main__":

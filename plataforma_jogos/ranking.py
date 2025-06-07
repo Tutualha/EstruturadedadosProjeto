@@ -1,8 +1,9 @@
 from jogador import Jogador
-
+import pickle
 class Ranking:
     def __init__(self):
         self.jogadores = []  # lista de objetos Jogador
+        self.jogadores = self.carregar_dados()
 
     def adicionar_jogador(self, jogador):
         self.jogadores.append(jogador)
@@ -26,3 +27,14 @@ class Ranking:
             if nome.lower() == jogador.nome.lower():
                 return jogador
         return None
+    
+    def salvar_dados(self):
+        with open("jogadores.pkl", "wb") as f:
+            pickle.dump(self.jogadores, f)
+
+    def carregar_dados(self):
+        try:
+            with open("jogadores.pkl", "rb") as f:
+                return pickle.load(f)
+        except FileNotFoundError:
+            return []

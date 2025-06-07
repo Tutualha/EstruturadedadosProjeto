@@ -6,14 +6,17 @@ def limpar_tela():
 
 # Mostra o menu princiapal do jogo e retorna as escolhas como str
 def menu0_jogo():
-    print('n/---Menu Principal---')
-    print('1. Criar jogador')
-    print('2. Atualizar pontuação')
-    print('3. Classificação ')
-    print('4. Modo de jogo')
-    print('5. Iniciar partida')
-    print("6. Matchmaking automático")
-    print('0. Salvar e sair.')
+    print("""
+🎮 MENU PRINCIPAL
+1. Adicionar jogador
+2. Atualizar pontuação
+3. Mostrar ranking
+4. Criar partida manual
+5. Mostrar partidas
+6. Matchmaking automático
+7. Finalizar partida
+0. Salvar e sair
+""")
     return input('Ecolha uma opção: ')
 
 # pausa o programa até o usuário apertar a tecla Enter
