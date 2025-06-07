@@ -45,27 +45,6 @@ EstruturadedadosProjeto/
    python main.py
    ```
 
-## Como contribuir
-
-1. Crie uma branch para sua mudança:
-
-   ```bash
-   git checkout -b minha-feature
-   ```
-2. Faça suas alterações
-3. Adicione e faça commit:
-
-   ```bash
-   git add .
-   git commit -m "Descrição clara da mudança"
-   ```
-4. Envie a branch:
-
-   ```bash
-   git push origin minha-feature
-   ```
-5. Abra um pull request no GitHub.
-
 ## Contribuidores
 
 * **Heitor Sato Callejon Nóbrega** – RGM 38807742
