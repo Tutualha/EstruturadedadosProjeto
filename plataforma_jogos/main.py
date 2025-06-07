@@ -114,6 +114,7 @@ def main():
                     vencedor = partida.jogadores[vencedor_index]
                     partida.finalizar_partida(vencedor)
                     vencedor.vitorias += 1  # atualiza vitórias
+                    vencedor.pontos += 10
                 else:
                     print("⚠️ Essa partida já foi finalizada.")
             else:
