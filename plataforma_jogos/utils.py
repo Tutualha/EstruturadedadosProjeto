@@ -1,9 +1,11 @@
-import os 
+import os  # Usado para limpar a tela
 
-def limpar_tela():
+# Limpa o terminal (tanto no Windows qunato no Linux)
+def limpar_tela(): 
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def menu0_jogo():
+# Mostra o menu princiapal do jogo e retorna as escolhas como str
+def menu_jogo():
     print('n/---Menu Principal---')
     print('1. Seu Perfil')
     print('2. Alterar Nickname')
@@ -13,5 +15,6 @@ def menu0_jogo():
     print('0. Salvar e sair.')
     return input('Ecolha uma opção: ')
 
+# pausa o programa até o usuário apertar a tecla Enter
 def pausar(): 
     input('\n Pressione Enter para continuar...')
