@@ -2,10 +2,17 @@ from matchmaking import matchmaking
 from jogador import Jogador
 from ranking import Ranking
 from partida import Partidas
-from utils import menu_jogo, limpar_tela
+from utils import menu0_jogo, limpar_tela
 import uuid
+# imports:
+""""uuid é usado para gerar IDs únicos para jogadores e partidas
+    ultils é onde colocamos o print do menu e a função de limpar a tela
+    partida é a classe que representa uma partida de jogo
+    ranking é a classe que gerencia os jogadores e suas pontuações
+    jogador é a classe que representa um jogador no jogo
+    matchmaking é a função que busca jogadores compatíveis para partidas"""
 
-
+#def onde o usuario cadastra os jogadores, com base na classe Jogador e armazenamento na classe Ranking que contem uma lista
 def cadastrar_jogador(ranking):
     nome = input("Nome do jogador: ")
     pontos = int(input("Pontuação inicial: "))
@@ -13,7 +20,7 @@ def cadastrar_jogador(ranking):
     jogador = Jogador(nome, jogador_id, pontos, vitorias=0)
     ranking.adicionar_jogador(jogador)
 
-
+# funçao para atualizar a pontuação de um jogador, com base na classe do Ranking
 def atualizar_pontuacao(ranking):
     nome = input("Nome do jogador a atualizar: ")
     nova_pontos = int(input("Nova pontuação: "))
@@ -77,7 +84,7 @@ def main():
 
     while True:
         limpar_tela()
-        opcao = menu_jogo()
+        opcao = menu0_jogo()
 
         if opcao == "1":
             cadastrar_jogador(ranking)
