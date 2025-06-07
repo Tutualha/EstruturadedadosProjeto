@@ -15,7 +15,6 @@ EstruturadedadosProjeto/
 ├── plataforma_jogos/
 │   ├── __init__.py                # Torna o diretório um pacote Python
 │   ├── main.py                    # Arquivo principal que executa o sistema (menu, lógica principal)
-│   ├── busca.py                   # Funções auxiliares de busca por jogadores e partidas
 │   ├── jogador.py                 # Classe Jogador (nome, id, pontos, vitórias)
 │   ├── matchmaking.py             # Função de matchmaking automático (baseada em critérios de pontuação/vitórias)
 │   ├── partida.py                 # Classe Partida (jogadores, modo, ping, status, vencedor)
@@ -29,16 +28,43 @@ EstruturadedadosProjeto/
 
 ````
 
+## Principais Componentes 🧩
+Aqui está o que cada arquivo, classe e objeto representa no projeto
+
+| Módulo           | Descrição                                                                                                |
+| ---------------- | -------------------------------------------------------------------------------------------------------- |
+| `main.py`        | Ponto de entrada do sistema. Menu principal e chamadas de função.                                        |
+| `jogador.py`     | Define a estrutura e atributos dos jogadores.                                                            |
+| `partida.py`     | Representa uma partida entre jogadores, com suporte para adicionar jogadores, finalizar e exibir status. |
+| `ranking.py`     | Gera e gerencia o ranking dos jogadores, incluindo persistência via `pickle`.                            |
+| `matchmaking.py` | Implementa um sistema de matchmaking automático baseado em critérios de pontuação e vitórias.            |                                    |
+| `utils.py`       | Contém funções auxiliares para menus, interação com o usuário e limpeza de tela.                         |
+
+
+
 ## Tecnologias utilizadas
 - Linguagem principal: **Python**
-- Estruturas de dados: listas, filas, pilhas, árvores
+- Estruturas de dados utilizadas: 
+  - **Listas** para ranking e armazenamento de jogadores
+  - **Filas (`deque`)** no sistema de matchmaking
+  - **Pilhas e árvores** (simuladas/conceituais conforme solicitado pelo projeto)
+- Utilizamos libs como a uuid para criar ids para os jogadores e as partidas, deque() e pickle.
+
+   deque vem do módulo collections do Python e significa fila de duas pontas.
+   
+   O módulo pickle do Python é usado para salvar objetos...
 - Controle de versão: Git + GitHub
 
 ## Funcionalidades
 - **Ranking (leaderboard):** ordena jogadores por desempenho  
 - **Matchmaking:** emparelha jogadores com habilidades semelhantes  
 - **Busca eficiente:** localiza rapidamente partidas ou jogadores  
-- **Atualização de dados em tempo real:** mantém o sistema sincronizado dinamicamente  
+- **Atualização de dados em tempo real:** mantém o sistema sincronizado dinamicamente 
+
+## 💾 Salvamento de Dados
+Os dados dos jogadores são salvos em dados/jogadores.pkl automaticamente ao sair do sistema (opção 0 do menu).
+
+O formato usado é pickle, ideal para serializar objetos Python de forma simples e eficiente.
 
 ## Como usar
 1. Clone o repositório:
